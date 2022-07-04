@@ -1,6 +1,6 @@
 <template>
     <input type="text" v-model="value" :style="style" @click="showPicker">
-    <div class="pickerContent" :style="!showPickerFlag ? 'display:none' : ''">
+    <div class="pickerContent" v-show="showPickerFlag">
         <div class="btns">
             <div class="cancalBtn" :style="cancalStyle" @click="cancal">{{ cancalTxt }}</div>
             <div class="submitBtn" :style="submitStyle" @click="submit">{{ submitTxt }}</div>
